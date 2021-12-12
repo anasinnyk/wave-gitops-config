@@ -33,6 +33,6 @@ spec:
     **/.flux.yaml
   interval: 30s
   ref:
-    branch: main
+    branch: test
   url: https://github.com/anasinnyk/wave-gitops-config.git
 status: {}
