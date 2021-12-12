@@ -6,7 +6,7 @@ metadata:
   namespace: wego-system
 spec:
   interval: 1m0s
-  path: ./flux/resources/prometheus/vm-stack
+  path: ./flux/resources/prometheus/grafana
   prune: true
   sourceRef:
     kind: GitRepository

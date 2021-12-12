@@ -3,13 +3,13 @@ apiVersion: wego.weave.works/v1alpha1
 kind: Application
 metadata:
   labels:
-    wego.weave.works/app-identifier: wego-59c116e99d544b7f8faa28cef5e98401
+    wego.weave.works/app-identifier: wego-f821c15f23967bf4f4971d804c83ae90
   name: wave-gitops-config
   namespace: wego-system
 spec:
   branch: main
   config_url: ssh://git@github.com/anasinnyk/wave-gitops-config.git
   deployment_type: kustomize
-  path: ./flux/resources/prometheus/vm-stack
+  path: ./flux/resources/prometheus/grafana
   source_type: git
   url: ssh://git@github.com/anasinnyk/wave-gitops-config.git
