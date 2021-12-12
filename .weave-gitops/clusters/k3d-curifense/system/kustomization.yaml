@@ -1,0 +1,20 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - flux-source-resource.yaml
+  - flux-system-kustomization-resource.yaml
+  - flux-user-kustomization-resource.yaml
+  - gitops-runtime.yaml
+  - wego-app.yaml
+  - wego-system.yaml
+patches:
+  - patch: |-
+      - op: replace
+        path: /spec/template/spec/containers/0/resources/limits/memory
+        value: 2Gi
+    target:
+      version: v1
+      group: apps
+      kind: Deployment
+      name: source-controller
+      namespace: wego-system
